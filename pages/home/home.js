@@ -4,10 +4,27 @@ Page({
   /**
    * 页面的初始数据
    */
+  // Mustache语法
   data: {
-
+    name:'fuck',
+    age:18888,
+    students:[
+      { id: 1, name: "aa", age: 15 },
+      { id: 1, name: "bb", age: 16 },
+      {id:1,name:"cc",age:17},
+    ],
+    counter:0
   },
-
+  handleBtnClick(){
+    this.setData({
+      counter:this.data.counter+1
+    })
+  },
+  handleSubtraction(){
+    this.setData({
+      counter: this.data.counter -1
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -19,7 +36,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**
