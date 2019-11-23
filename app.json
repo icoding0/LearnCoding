@@ -1,7 +1,30 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/about/page"
+    "pages/about/page",
+    "pages/category/category"
   ],
-  "sitemapLocation": "sitemap34.json"
+  "sitemapLocation": "sitemap34.json",
+  "window": {
+    "navigationBarBackgroundColor": "#f10180",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "fuck",
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "text",
+      "iconPath": "assets/imgs/fenlei.png",
+      "selectedIconPath": "assets/imgs/fenlei.png"
+    },
+    {
+      "pagePath": "pages/category/category",
+      "text": "text",
+      "iconPath": "assets/imgs/shouye.png",
+      "selectedIconPath": "assets/imgs/shouye.png"
+    }]
+  }
 }
