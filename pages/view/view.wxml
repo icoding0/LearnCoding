@@ -1,0 +1,15 @@
+<!--pages/view/view.wxml-->
+<!-- <text>pages/view/view.wxml</text> -->
+<!-- 1.view基本使用 -->
+<view class="box">啊啊啊</view>
+<view>发发发</view>
+<!-- 2.hover-class 按下显示的样式 -->
+<view hover-class="hover-view">sss</view>
+<!-- 3.hover-stay-time 松开后保留样式时间 -->
+<view hover-stay-time="{{0}}" hover-class="hover-view">sss</view>
+<!-- 4.hover-stop-propagation 阻止冒泡 -->
+<view hover-stay-time="{{200}}" hover-class="hover-view" class="b">
+  <view hover-stay-time="{{200}}" hover-class="hover-view2" class="b2" hover-stop-propagation="{{true}}">sss</view>
+</view>
+
+

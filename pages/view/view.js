@@ -1,4 +1,4 @@
-// pages/button/button.js
+// pages/view/view.js
 Page({
 
   /**
