@@ -3,7 +3,9 @@
     "pages/home/home",
     "pages/about/page",
     "pages/category/category",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/text/text",
+    "pages/button/button"
   ],
   "sitemapLocation": "sitemap34.json",
   "window": {
