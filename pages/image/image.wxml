@@ -1,0 +1,22 @@
+<!--pages/image/image.wxml-->
+<!-- <text>pages/image/image.wxml</text> -->
+<!-- 重点 
+        1.img可以写成单标签  也可以写成双标签
+        2.默认有自己的大小  320*240
+        3.行内块级元素 inline-block-->
+<!-- <image></image> -->
+<!-- 2. src:本地地址/远处地址 -->
+<image src="../../assets/test/codrwhy.jpg"/>
+<image src="/assets/test/codrwhy.jpg"/>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+<!-- 补充  相册中的图片-->
+<button bindtap="handleChooseAlbum">选中</button>
+<image src="{{imagePath}}"/>
+<!-- 3.bindload 监听图片加载完成 -->
+<!-- lazy-load 图片懒加载 -->
+<image wx:for="{{1}}" wx:key="1"
+    src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+    bindload="handLoadImage"
+    lazy-load="{{true}}"/>
+    <!-- 4. show-menu-by-longpress	识别小程序码 -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" show-menu-by-longpress/>

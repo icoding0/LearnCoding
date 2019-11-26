@@ -2,8 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/about/page",
-    "pages/view/view"
-    
+    "pages/view/view",
+    "pages/image/image"
   ],
   "sitemapLocation": "sitemap34.json"
   
