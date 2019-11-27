@@ -1,0 +1,5 @@
+/* pages/scroll/scroll.wxss */
+.content1{background: rebeccapurple;white-space: nowrap}
+.item1{background: wheat;width: 100px;height: 100px;margin: 10px;display: inline-block}
+.content2{background: burlywood;height: 200pt;margin-top: 10pt }
+.item2{background: wheat;width: 100px;height: 100px;margin: 10px;}

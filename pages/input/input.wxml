@@ -1,0 +1,15 @@
+<!--pages/input/input.wxml-->
+<!-- <text>pages/input/input.wxml</text> -->
+<input/>
+<!-- 2 value 默认值 -->
+<input value="cao" />
+<!-- 3.type   text number idcard  -->
+
+<!-- 4. password  -->
+<input value="cao" password/>
+<!-- 5. placeholder  -->
+
+<input value="" placeholder="cocoooo"/>
+<!-- 6. input绑定事件  -->
+
+<input bindinput="bindInput" bindfocus="bindFocus" bindblur="bindBlur"/>

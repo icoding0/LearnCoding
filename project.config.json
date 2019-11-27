@@ -45,7 +45,7 @@
 				{
 					"id": 0,
 					"name": "分类",
-					"pathName": "pages/image/image",
+					"pathName": "pages/scroll/scroll",
 					"query": "",
 					"scene": null
 				}

@@ -3,7 +3,10 @@
     "pages/home/home",
     "pages/about/page",
     "pages/view/view",
-    "pages/image/image"
+    "pages/image/image",
+    "pages/input/input",
+    "pages/scroll/scroll"
+    
   ],
   "sitemapLocation": "sitemap34.json"
   
