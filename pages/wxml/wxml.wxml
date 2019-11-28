@@ -1,0 +1,10 @@
+<!--pages/wxml/wxml.wxml-->
+<!--Mustache语法-->
+<view> {{firstName}} {{lastName}}</view>
+<view> {{firstName + ' ' +lastName}} </view>
+<view> {{age >= 18 ? '成年' : '未成年'}} </view>
+<view> {{nowDate}} </view>
+<view class="box {{isActive ? 'active' : ''}}"> {{nowDate}} </view>
+<button bindtap="handleSwitchColor" size="mini" plain>切换颜色</button>
+
+

@@ -43,9 +43,9 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "分类",
-					"pathName": "pages/home/home",
+					"pathName": "pages/wxml/wxml",
 					"query": "",
 					"scene": null
 				}
