@@ -1,2 +1,5 @@
 /* pages/home/home.wxss */
+@import  'style/font.wxss';
 .title{color: red }
+.content1{height: 100px;width: 100px;background: rebeccapurple}
+.content2{height: 200rpx;width: 200rpx;background: wheat}

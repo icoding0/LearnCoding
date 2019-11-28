@@ -1,7 +1,4 @@
 <!--pages/home/home.wxml-->
-<view>{{name}}</view>
-<view>{{age+1}}</view>
-<view wx:key="id" wx:for="{{students}}">{{item.name}}</view>
-<view>{{counter}}</view>
-<button bindtap="handleBtnClick">+</button>
-<button bindtap="handleSubtraction">-</button>
+<!-- rpx 自动适配 -->
+<view class="content1 sizes">1231321</view>
+<view class="content2">1231321</view>

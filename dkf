@@ -1,0 +1,217 @@
+[33mcommit 7923da79bf1387e9ad1399ab37e317bf93390b74[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;33mtag: show[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: w597994146@163.com <w597994146@163.com>
+Date:   Wed Nov 27 19:47:54 2019 +0800
+
+    input,scroll-view
+
+[1mdiff --git a/app.json b/app.json[m
+[1mindex 23f53f3..983f6ff 100644[m
+[1m--- a/app.json[m
+[1m+++ b/app.json[m
+[36m@@ -3,7 +3,10 @@[m
+     "pages/home/home",[m
+     "pages/about/page",[m
+     "pages/view/view",[m
+[31m-    "pages/image/image"[m
+[32m+[m[32m    "pages/image/image",[m
+[32m+[m[32m    "pages/input/input",[m
+[32m+[m[32m    "pages/scroll/scroll"[m
+[32m+[m[41m    [m
+   ],[m
+   "sitemapLocation": "sitemap34.json"[m
+   [m
+[1mdiff --git a/pages/input/input.js b/pages/input/input.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b046204[m
+[1m--- /dev/null[m
+[1m+++ b/pages/input/input.js[m
+[36m@@ -0,0 +1,19 @@[m
+[32m+[m[32m// pages/input/input.js[m
+[32m+[m[32mPage({[m
+[32m+[m
+[32m+[m[32m  /**[m
+[32m+[m[32m   * 页面的初始数据[m
+[32m+[m[32m   */[m
+[32m+[m[32m  data: {[m
+[32m+[m
+[32m+[m[32m  },[m
+[32m+[m[32m  bindInput(event){[m
+[32m+[m[32m    console.log('输入内容', event)[m
+[32m+[m[32m  },[m
+[32m+[m[32m  bindFocus(event) {[m
+[32m+[m[32m    console.log('获取焦点', event)[m
+[32m+[m[32m  },[m
+[32m+[m[32m  bindBlur(event) {[m
+[32m+[m[32m    console.log('失去焦点', event)[m
+[32m+[m[32m  }[m
+[32m+[m[32m})[m
+\ No newline at end of file[m
+[1mdiff --git a/pages/input/input.json b/pages/input/input.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8835af0[m
+[1m--- /dev/null[m
+[1m+++ b/pages/input/input.json[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "usingComponents": {}[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/pages/input/input.wxml b/pages/input/input.wxml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ce9ac62[m
+[1m--- /dev/null[m
+[1m+++ b/pages/input/input.wxml[m
+[36m@@ -0,0 +1,15 @@[m
+[32m+[m[32m<!--pages/input/input.wxml-->[m
+[32m+[m[32m<!-- <text>pages/input/input.wxml</text> -->[m
+[32m+[m[32m<input/>[m
+[32m+[m[32m<!-- 2 value 默认值 -->[m
+[32m+[m[32m<input value="cao" />[m
+[32m+[m[32m<!-- 3.type   text number idcard  -->[m
+[32m+[m
+[32m+[m[32m<!-- 4. password  -->[m
+[32m+[m[32m<input value="cao" password/>[m
+[32m+[m[32m<!-- 5. placeholder  -->[m
+[32m+[m
+[32m+[m[32m<input value="" placeholder="cocoooo"/>[m
+[32m+[m[32m<!-- 6. input绑定事件  -->[m
+[32m+[m
+[32m+[m[32m<input bindinput="bindInput" bindfocus="bindFocus" bindblur="bindBlur"/>[m
+[1mdiff --git a/pages/input/input.wxss b/pages/input/input.wxss[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4f29cc6[m
+[1m--- /dev/null[m
+[1m+++ b/pages/input/input.wxss[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m/* pages/input/input.wxss */[m
+[32m+[m[32minput{margin: 10pt;border: 1pt solid #f10180}[m
+\ No newline at end of file[m
+[1mdiff --git a/pages/scroll/scroll.js b/pages/scroll/scroll.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..28b39aa[m
+[1m--- /dev/null[m
+[1m+++ b/pages/scroll/scroll.js[m
+[36m@@ -0,0 +1,68 @@[m
+[32m+[m[32m// pages/scroll/scroll.js[m
+[32m+[m[32mPage({[m
+[32m+[m
+[32m+[m[32m  /**[m
+[32m+[m[32m   * 页面的初始数据[m
+[32m+[m[32m   */[m
+[32m+[m[32m  data: {[m
+[32m+[m
+[32m+[m[32m  },[m
+[32m+[m[32m  bindScroll(event){[m
+[32m+[m[32m    console.log(1)[m
+[32m+[m[32m  },[m
+[32m+[m[32m  /**[m
+[32m+[m[32m   * 生命周期函数--监听页面加载[m
+[32m+[m[32m   */[m
+[32m+[m[32m  onLoad: function (options) {[m
+[32m+[m
+[32m+[m[32m  },[m
+[32m+[m
+[32m+[m[32m  /**[m
+[32m+[m[32m   * 生命周期函数--监听页面初次渲染完成[m
+[32m+[m[32m   */[m
+[32m+[m[32m  onReady: function () {[m
+[32m+[m
+[32m+[m[32m  },[m
+[32m+[m
+[32m+[m[32m  /**[m
+[32m+[m[32m   * 生命周期函数--监听页面显示[m
+[32m+[m[32m   */[m
+[32m+[m[32m  onShow: function () {[m
+[32m+[m
+[32m+[m[32m  },[m
+[32m+[m
+[32m+[m[32m  /**[m
+[32m+[m[32m   * 生命周期函数--监听页面隐藏[m
+[32m+[m[32m   */[m
+[32m+[m[32m  onHide: function () {[m
+[32m+[m
+[32m+[m[32m  },[m
+[32m+[m
+[32m+[m[32m  /**[m
+[32m+[m[32m   * 生命周期函数--监听页面卸载[m
+[32m+[m[32m   */[m
+[32m+[m[32m  onUnload: function () {[m
+[32m+[m
+[32m+[m[32m  },[m
+[32m+[m
+[32m+[m[32m  /**[m
+[32m+[m[32m   * 页面相关事件处理函数--监听用户下拉动作[m
+[32m+[m[32m   */[m
+[32m+[m[32m  onPullDownRefresh: function () {[m
+[32m+[m
+[32m+[m[32m  },[m
+[32m+[m
+[32m+[m[32m  /**[m
+[32m+[m[32m   * 页面上拉触底事件的处理函数[m
+[32m+[m[32m   */[m
+[32m+[m[32m  onReachBottom: function () {[m
+[32m+[m
+[32m+[m[32m  },[m
+[32m+[m
+[32m+[m[32m  /**[m
+[32m+[m[32m   * 用户点击右上角分享[m
+[32m+[m[32m   */[m
+[32m+[m[32m  onShareAppMessage: function () {[m
+[32m+[m
+[32m+[m[32m  }[m
+[32m+[m[32m})[m
+\ No newline at end of file[m
+[1mdiff --git a/pages/scroll/scroll.json b/pages/scroll/scroll.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8835af0[m
+[1m--- /dev/null[m
+[1m+++ b/pages/scroll/scroll.json[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "usingComponents": {}[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/pages/scroll/scroll.wxml b/pages/scroll/scroll.wxml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..839b742[m
+[1m--- /dev/null[m
+[1m+++ b/pages/scroll/scroll.wxml[m
+[36m@@ -0,0 +1,13 @@[m
+[32m+[m[32m<!--pages/scroll/scroll.wxml-->[m
+[32m+[m[32m<!-- 水平滚动 -->[m
+[32m+[m[32m<scroll-view class="content1" scroll-x>[m
+[32m+[m[32m  <view wx:for="{{10}}" class="item1">{{item}}</view>[m
+[32m+[m[32m</scroll-view>[m
+[32m+[m
+[32m+[m[32m<scroll-view class="content2" scroll-y>[m
+[32m+[m[32m  <view wx:for="{{10}}" class="item2">{{item}}</view>[m
+[32m+[m[32m</scroll-view>[m
+[32m+[m
+[32m+[m[32m<scroll-view class="content2" scroll-y bindscroll="bindScroll">[m
+[32m+[m[32m  <view wx:for="{{10}}" class="item2" >{{item}}</view>[m
+[32m+[m[32m</scroll-view>[m
+\ No newline at end of file[m
+[1mdiff --git a/pages/scroll/scroll.wxss b/pages/scroll/scroll.wxss[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ff88dbf[m
+[1m--- /dev/null[m
+[1m+++ b/pages/scroll/scroll.wxss[m
+[36m@@ -0,0 +1,5 @@[m
+[32m+[m[32m/* pages/scroll/scroll.wxss */[m
+[32m+[m[32m.content1{background: rebeccapurple;white-space: nowrap}[m
+[32m+[m[32m.item1{background: wheat;width: 100px;height: 100px;margin: 10px;display: inline-block}[m
+[32m+[m[32m.content2{background: burlywood;height: 200pt;margin-top: 10pt }[m
+[32m+[m[32m.item2{background: wheat;width: 100px;height: 100px;margin: 10px;}[m
+[1mdiff --git a/project.config.json b/project.config.json[m
+[1mindex 109e05f..a286833 100644[m
+[1m--- a/project.config.json[m
+[1m+++ b/project.config.json[m
+[36m@@ -45,7 +45,7 @@[m
+ 				{[m
+ 					"id": 0,[m
+ 					"name": "分类",[m
+[31m-					"pathName": "pages/image/image",[m
+[32m+[m					[32m"pathName": "pages/scroll/scroll",[m
+ 					"query": "",[m
+ 					"scene": null[m
+ 				}[m
