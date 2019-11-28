@@ -9,12 +9,33 @@ Page({
     lastName:'timo',
     age:'20',
     nowDate:new Date().toLocaleString(),
-    isActive:true
+    isActive:true,
+    isShow:true,
+    score:98,
+    movies:['寂静岭','活埋','迷雾'],
+    nums:[
+      [1, 2, 3],
+      [11, 22, 33],
+      [111,222,333]
+    ],
+    letters: ["a", "b", "c"]
   },
   handleSwitchColor(){
     const _this = this
     _this.setData({
       isActive:!this.data.isActive
+    })
+  },
+  handleSwitchShow() {
+    const _this = this
+    _this.setData({
+      isShow: !this.data.isShow
+    })
+  },
+  handleIncrement(){
+    const _this = this
+    _this.setData({
+      score: this.data.score-10
     })
   },
   /**

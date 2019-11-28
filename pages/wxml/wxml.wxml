@@ -6,5 +6,41 @@
 <view> {{nowDate}} </view>
 <view class="box {{isActive ? 'active' : ''}}"> {{nowDate}} </view>
 <button bindtap="handleSwitchColor" size="mini" plain>切换颜色</button>
+<!-- 条件判断 wx:if -->
+<view wx:if="{{isShow}}"> {{nowDate}} </view>
+<button bindtap="handleSwitchShow" size="mini" plain>切换显示</button>
+<!-- 条件判断 wx:elif/wx:else -->
+<view wx:if="{{score >= 90}}"> 优 </view>
+<view wx:elif="{{score >= 80}}"> 良 </view>
+<view wx:elif="{{score >= 60}}"> 等 </view>
+<view wx:else> 差</view>
+<button bindtap="handleIncrement" size="mini" >切换显示</button>
+
+<!-- hidden -->
+<view hidden="{{false}}"> asdfsfaf差</view>
+
+<!-- wx:if hidden 区别  hidden保留空间display:none  wx:if 隐藏 不存在-->
+<!-- 切换频率高 用hidden
+      频率低 wx:if -->
+<view>-------</view>
+<view hidden="{{true}}">hidden</view>
+<view wx:if="{{false}}">wx:if</view>
+<view>-------</view>
 
 
+<view>--------------</view>
+<!-- wx:for -->
+<!-- 1.1 遍历数组，字符串，数组 -->
+<!-- <view wx:for='{{["a","b","c"]}}' wx:key="1">{{item}}</view>
+<view wx:for='fuck' wx:key="1">{{item}}{{index}}</view>
+<view wx:for='{{9}}' wx:key="1">{{item}}{{index}}</view> -->
+<!-- 1.2 block标签 包裹 不做渲染 只接受控制属性   包裹，不影响普通属性阅读-->
+<block></block>
+<!-- 1.3 item index 起名字-->
+<!-- 多层便利时使用 -->
+<!-- <view wx:for='{{movies}}' wx:for-item="movie" wx:for-index="i" wx:key="index">{{movie}}{{i}}</view>
+<block wx:for="{{nums}}" wx:for-item="parent">
+<view wx:for="{{parent}}">{{item}}</view>
+</block> -->
+<!-- 1.4 key  键值 提高性能 唯一-->
+<view wx:for='{{letters}}' wx:key="1">{{item}}</view>
