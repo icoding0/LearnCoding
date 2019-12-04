@@ -43,4 +43,20 @@
 <view wx:for="{{parent}}">{{item}}</view>
 </block> -->
 <!-- 1.4 key  键值 提高性能 唯一-->
-<view wx:for='{{letters}}' wx:key="1">{{item}}</view>
+<!-- <view wx:for='{{letters}}' wx:key="1">{{item}}</view> -->
+<!-- 模板 template -->
+<!-- include 不能导入 template -->
+<import src="../abc/abc.wxml"/>
+<template is="content" data="{{firt:1}}"/>
+<template is="vvc" data="{{firt:1}}"/>
+<include src="../abc/header.wxml"/>
+<view>111</view>
+<include src="../abc/footer.wxml"/>
+
+<!-- wxml两种导入方式
+import
+1.主要是导入template
+2.特点不能进行递归导入 
+include
+1.将公共的wxml抽取到一个文件
+2.不能导入template wxs，可以递归导入-->

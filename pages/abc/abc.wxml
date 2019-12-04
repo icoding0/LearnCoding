@@ -1,0 +1,7 @@
+
+<include src="./bbb.wxml"/>
+<include src="./bbb.wxml"/>
+<template name="content">
+<button size="mini">{{firt}}</button>
+<view>bbbb</view>
+</template>
