@@ -1,7 +1,46 @@
 <!--pages/home/home.wxml-->
-<view>{{name}}</view>
-<view>{{age+1}}</view>
-<view wx:key="id" wx:for="{{students}}">{{item.name}}</view>
-<view>{{counter}}</view>
-<button bindtap="handleBtnClick">+</button>
-<button bindtap="handleSubtraction">-</button>
+<!-- <view class="title">111</view> -->
+<!-- 自定义组件基本使用 -->
+<!-- <my-cpn></my-cpn> -->
+
+<!-- 自定义组件样式细节 -->
+<!-- 1.页面 组件互补影响
+     2.组件不能使用id 标签 属性选择器 -->
+<!-- <my-style/> -->
+
+<!-- <button size="mini">11</button> -->
+
+<!-- 3.给自定义组件传递数据 / 样式-->
+<!-- <my-prop title="fuck" titleclass="red"/>
+<my-prop title="you" titleclass="green"/>
+<my-prop /> -->
+
+<!-- 4.自定义事件 -->
+<!-- <view>{{counter}}</view>
+<my-event bind:increment="increment"/> -->
+
+<!-- 5.w-tab-control练习 -->
+<!-- <w-tab-control titles = "{{['流行','新歌','精选','臭逼']}}"
+                bind:itemclick="tabcontrolclick" /> -->
+
+<!-- 6. this.selectComponent('.sel-class')-->
+<!-- <button bindtap="handleIncrement" >修改组件内的数据</button>
+<my-sel class="sel-class" id="sel-id"/> -->
+
+
+<!-- 7 单个插槽 -->
+<!-- <my-solt>
+  <button size="mini">插入的</button>
+</my-solt>
+<my-solt>
+  <view>fucccccccccck</view>
+</my-solt> -->
+
+<!-- 7.2多个插槽 -->
+<!-- name -->
+<!-- options -> multipleSlots:true -->
+<!-- <my-mslot>
+<view slot="slot2">caonima</view>
+<view slot="slot1">asda</view>
+</my-mslot> -->
+<bb titles="{{['c','a','o']}}" bind:fashe="dianji"></bb>

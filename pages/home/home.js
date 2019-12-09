@@ -4,32 +4,37 @@ Page({
   /**
    * 页面的初始数据
    */
-  // Mustache语法
   data: {
-    name:'fuck',
-    age:18888,
-    students:[
-      { id: 1, name: "aa", age: 15 },
-      { id: 1, name: "bb", age: 16 },
-      {id:1,name:"cc",age:17},
-    ],
     counter:0
   },
-  handleBtnClick(){
+  increment(event){
     this.setData({
       counter:this.data.counter+1
     })
+    console.log(event)
   },
-  handleSubtraction(){
-    this.setData({
-      counter: this.data.counter -1
-    })
+  tabcontrolclick(event){
+    console.log(event)
+  },
+  handleIncrement(){
+    // 目的 修改组件内的对象
+    const my_sel=this.selectComponent('.sel-class')
+    // 直接修改 不合理
+    // my_sel.setData({
+    //   counter: my_sel.data.counter+20
+    // })
+    // 通过方法
+    my_sel.incrementcounter(10)
+  },
+  dianji(event){
+    console.log(event)
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.showNavigationBarLoading()
+    
   },
 
   /**

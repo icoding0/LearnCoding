@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/about/page"
+    "pages/about/page",
+    "components/my-cpn/my-cpn"
   ],
   "sitemapLocation": "sitemap34.json"
 }

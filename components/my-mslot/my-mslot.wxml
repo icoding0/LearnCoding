@@ -1,0 +1,7 @@
+<!--components/my-mslot/my-mslot.wxml-->
+<view>开始</view>
+<view class="a1"><slot name="slot1"/></view>
+<view class="a2"><slot name="slot2"/></view>
+<view class="a3"><slot name="slot3"/></view>
+
+<view>结尾</view>
