@@ -1,3 +1,7 @@
 <!--pages/home/home.wxml-->
 <text class="title">333</text>
 <button size="mini">333</button>
+
+
+<!-- 分享按钮 -->
+<button size="mini" open-type="share">分享</button>
