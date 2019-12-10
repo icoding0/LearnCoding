@@ -1,22 +1,18 @@
-// pages/home/home.js
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title:'哈哈'
+
   },
-  handlePushDetail(){
-    wx.navigateTo({
-      url: '/pages/detail/detail',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
   },
 
   /**
@@ -44,7 +40,13 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    // 1.获取首页对象
+    // getCurrentPages 获取当前所有栈页面
+    const pages = getCurrentPages()
+    const home = pages[pages.length - 2]
+    home.setData({
+      title:'hehe'
+    })
   },
 
   /**

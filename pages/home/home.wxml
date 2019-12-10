@@ -1,3 +1,19 @@
 <!--pages/home/home.wxml-->
-<text class="title">pages/caonima/home.wxml</text>
-<button size="mini">asdf</button>
+<!-- 1.navigator页面跳转 -->
+<navigator url="/pages/detail/detail">调到详情</navigator>
+<!-- 2.navigator属性 open-type -->
+<!-- 默认navigate -->
+
+<!-- redirect  -->
+<navigator url="/pages/detail/detail" open-type="redirect">调到详情redirect</navigator>
+<!-- switchTab 跳转tabBar页面 -->
+<navigator url="/pages/about/page" open-type="switchTab">调到详情switchTab</navigator>
+<!-- reLaunch 关闭所有页面 -->
+<navigator url="/pages/detail/detail" open-type="reLaunch">调到详情reLaunch</navigator>
+
+<!-- 2跳转传递数据 -->
+<navigator url="/pages/detail/detail?name=cao">调到详情传参</navigator>
+<view>{{title}}</view>
+
+<!-- 3.代码跳转 -->
+<button size="mini" bindtap="handlePushDetail">详情</button>
